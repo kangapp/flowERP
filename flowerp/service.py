@@ -239,7 +239,7 @@ class ERPService:
             ).fetchall()
             for line in lines:
                 if line["available"] < line["quantity"]:
-                    continue
+                    raise InsufficientStock(line["sku"], line["quantity"], line["available"])
             for line in lines:
                 if line["available"] < line["quantity"]:
                     continue
