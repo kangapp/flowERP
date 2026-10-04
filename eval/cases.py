@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+from eval.l08_atomic_checks import (l08_personal_atomic_success,
+                                    l08_personal_atomic_shortage,
+                                    l08_personal_atomic_write_error)
+
 import tempfile
 
 from datetime import date, timedelta

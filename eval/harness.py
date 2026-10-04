@@ -44,6 +44,12 @@ EVALS = [
 ]
 
 
+EVALS += [
+    ("l08_personal_atomic_success", "blocking", cases.l08_personal_atomic_success),
+    ("l08_personal_atomic_shortage", "blocking", cases.l08_personal_atomic_shortage),
+    ("l08_personal_atomic_write_error", "blocking", cases.l08_personal_atomic_write_error),
+]
+
 def run_suite(suite: str = "all", write_report: bool = True,
               case_names: list[str] | tuple[str, ...] | None = None,
               report_path: str | Path | None = None) -> dict:
